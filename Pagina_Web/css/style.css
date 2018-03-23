@@ -1,0 +1,232 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('../fonts/BebasNeueBook.woff2') format('woff2'),
+        url('../fonts/BebasNeueBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro Italic';
+    src: url('../fonts/SourceSansPro-It.woff2') format('woff2'),
+        url('../fonts/SourceSansPro-It.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	outline: none;
+}
+body {
+	background-image: url('../images/bg.jpg');
+	background-size: cover;
+}
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+a:hover {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+/*CSS HEADER*/
+header {
+	text-align: center;
+	padding: 5%;
+	position: relative;
+}
+.logo {
+	width: 13%;
+	margin: 0 auto;
+}
+.logo img {
+	width: 100%;
+}
+nav {
+	font-size: 32px;
+	color: #ffffff;
+	margin-top: 30px;
+}
+nav a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 5px 25px;
+	margin: 0 30px
+	-webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+	clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+	transition:All 1s ease;
+	-webkit-transition:All 2s ease;
+	-moz-transition:All 2s ease;
+	-o-transition:All 2s ease;
+
+}
+nav a:hover {
+	background-color: #e63324;
+	text-decoration: none;
+	color: #ffffff;
+	-webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+	clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+}
+nav a.active_menu {
+	background-color: #e63324;
+	-webkit-clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
+	clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);	
+}
+.social {
+	position: absolute;
+	top: 8%;
+	right: 2%;
+}
+.social ul li {
+	background-image: url('../images/social.png');
+	margin-bottom: 20px;
+	width: 50px;
+	height: 50px;
+}
+.social ul li.s_youtube {
+	background-position-y: 189px;
+}
+.social ul li.s_pinterest {
+	background-position-y: 119px;
+}
+.social ul li.s_facebook {
+	background-position-y: 50px;
+}
+.social ul li span {
+	display: none;
+}
+
+/*CSS NOSOTROS*/
+.content_prin	{
+    overflow: hidden;
+    padding: 0 3%;
+    display: flex;
+}
+.paragraph {
+	text-align: right;
+    font-size: 15px;
+    align-self: center;
+    padding: 0;
+    padding-right: 2%;
+}
+.paragraph p {
+	margin: 0;
+    padding: 0;
+    padding-left: 6px;
+}
+hr {
+	display: block;
+    border-width: 2px;
+    border-color: #e63324;
+}
+.img_nos {
+	text-align: center;
+	transition:All 1s ease;
+	-webkit-transition:All 1s ease;
+	-moz-transition:All 1s ease;
+	-o-transition:All 1s ease;
+}
+.img_nos:hover {
+	padding: 0;
+}
+.img_nos img {
+	max-width: 1140px;
+	width: 100%
+}
+.design {
+	text-align: center;
+	margin: 100px 0;
+}
+.design ul {
+	margin: 0;
+	vertical-align: middle;
+}
+.design ul li {
+	display: inline-block;
+	font-size: 34px;
+	font-family: 'Bebas Neue Book';
+	line-height: 33px;
+	padding: 0 70px;
+	vertical-align: middle;
+}
+.arq {
+	text-align: right;
+	border-right: 2px solid #e63324;
+	width: 307px;
+}
+.mob {
+	text-align: left;
+	border-left: 2px solid #e63324;
+	width: 326px;
+}
+.rombo {
+	margin: 0 50px;
+}
+
+/*CSS NUESTROS PROYECTOS*/
+.slider {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+}
+.slider #prev {
+    position: absolute;
+    align-self: center;
+    left: 40px;
+}
+.slider #next {
+    position: absolute;
+    align-self: center;
+    right: 40px;
+}
+#carousel {
+	width:100%;
+    height:300px;
+    position:relative;
+    clear:both;
+    overflow:hidden;
+}
+#carousel img {
+    visibility:hidden; /* hide images until carousel can handle them */
+    cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+}
+.hide_act {
+	display: none;
+}
+.info_proyect ul li {
+	list-style-type: square;
+	font-size: 20px;
+	color: #e63324;
+}
+
+/*CSS FOOTER*/
+footer {
+	background-color: #000000;
+	padding: 20px;
+	overflow: hidden;
+	width: 100%;
+}
+footer .data {
+    text-align: right;
+    border-right: 2px solid;
+}
+footer .col-md-6 p {
+	line-height: 20px;
+}
+
+@media (max-width: 600px) {
+
+}
