@@ -34,82 +34,240 @@
 	<link rel="icon" href="favicon.ico?v0.01">
 
 	<!-- Styles  -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 
 	<!-- Plugin Style -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.0/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+
     
     <!-- js -->
     <script src="./js/app.js"></script>
 
+
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.png">
-        </div>
-        <nav>
-            <a href="index.html">Nosotros</a>
-            <a class="active_menu" href="#">Nuestros proyectos</a>
-            <a href="">Contácto</a>
-        </nav>
-        <div class="social">
-            <ul>
-                <a href="" target="_blank"><li><span>Instagram</span></li></a>
-                <a href="" target="_blank"><li class="s_youtube"><span>Youtube</span></li></a>
-                <a href="" target="_blank"><li class="s_pinterest"><span>Pinterest</span></li></a>
-                <a href="" target="_blank"><li class="s_facebook"><span>Facebook</span></li></a>
-            </ul>        
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <nav>
+                <a href="index.html">Nosotros</a>
+                <a class="active_menu" href="#">Nuestros proyectos</a>
+                <a href="">Contácto</a>
+            </nav>
+            <div class="social">
+                <ul>
+                    <a href="" target="_blank"><li><span>Instagram</span></li></a>
+                    <a href="" target="_blank"><li class="s_youtube"><span>Youtube</span></li></a>
+                    <a href="" target="_blank"><li class="s_pinterest"><span>Pinterest</span></li></a>
+                    <a href="" target="_blank"><li class="s_facebook"><span>Facebook</span></li></a>
+                </ul>
+            </div>
         </div>
     </header>
-
-    <section class="slider">
-        <div id="carousel">
-            <a href="#">
-                <img src="images/proyect-1.jpg" id="item-1" />
-                <!-- <img class="hide_act" src="images/proyect-1-act.jpg" id="item-1" /> -->
-                <div class="info_proyect"> 
-                    <ul>
-                        <li><h3>PUNTO RED / 01</h3></li>
-                        <li class="loc">Barrio La Castellana – Bogotá</li>
-                    </ul>  
+<!--carousel section-->
+    <div class="carousel-section">
+        <!-- Swiper -->
+        <div class="swiper-container swiper-carousel">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-01.jpg" id="item-1" />
+                        <a href=""  data-toggle="modal" data-target="#proyectOne" class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>INTEGRA UNIVERSE GROUP
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Edificio Optimus – Bogotá</p>
+                    </div>
                 </div>
-            </a>
-            <a href="#">
-                <img src="images/proyect-2.jpg" id="item-2" />
-                <!-- <img class="hide_act" src="images/proyect-2-act.jpg" id="item-2" /> -->
-            </a>
-            <a href="#">
-                <img src="images/proyect-3.jpg" id="item-3" />
-                <!-- <img class="hide_act" src="images/proyect-3-act.jpg" id="item-3" /> -->
-            </a>
-            <a href="#">
-                <img src="images/proyect-4.jpg" id="item-4" />
-                <!-- <img class="hide_act" src="images/proyect-4-act.jpg" id="item-4" /> -->
-            </a>
-            <a href="#">
-                <img src="images/proyect-5.jpg" id="item-5" />
-                <!-- <img class="hide_act" src="images/proyect-5-act.jpg" id="item-5" /> -->
-            </a>
-            <a href="#">
-                <img src="images/proyect-6.jpg" id="item-6" />
-                <!-- <img class="hide_act" src="images/proyect-6-act.jpg" id="item-6" /> -->
-            </a>
-        </div>        
-        <a href="#" id="prev"><img src="images/prev.png"></a>
-        <a href="#" id="next"><img src="images/next.png"></a>
-    </section>
-    
-    <footer>
-        <div class="col-md-6 data">
-            <p><b>Arq. Didier Martinez</b> <br> 3213727970 <br> <a href="mailto:didier.martinezc@azomeg.com">didier.martinezc@azomeg.com</a></p>
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-02.jpg" id="item-1" />
+                        <a href=""  data-fancybox data-src="#proyectOne"  class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>YO PRESTO
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Colfecar Business Center – Bogotá</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-03.jpg" id="item-1" />
+                        <a href=""  data-toggle="modal" data-target="#proyectOne" class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>Punto red / 01
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Barrio La Castellana – Bogotá</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-04.jpg" id="item-1" />
+                        <a href=""  data-toggle="modal" data-target="#proyectOne" class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>Punto red / 02
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Barrio La Castellana – Bogotá</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-05.jpg" id="item-1" />
+                        <a href=""  data-toggle="modal" data-target="#proyectOne" class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>+ GOL / 01
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Avenida Calle 100 – Bogotá</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-box-content">
+                        <img src="images/proyect-azome-group-06.jpg" id="item-1" />
+                        <a href=""  data-toggle="modal" data-target="#proyectOne" class="proyect-btn">
+                            <span>+</span> conoce más
+                        </a>
+                    </div>
+                    <div class="proyectInfo">
+                        <h3 class="proyectName">
+                            <span class="square"></span>+ GOL / 02
+                        </h3>
+                        <p class="proyectLocation"><i class="fa fa-map-marker"></i>Avenida Calle 100 – Bogotá</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+
         </div>
-        <div class="col-md-6">
-            <p><b>Arq. Luis Malagón</b> <br> 3155220979 <br> <a href="mailto:luis.malagon@azomeg.com">luis.malagon@azomeg.com</a></p>
+        <div class=" swiper-button-white swiper-button-next  sbn-1"></div>
+        <div class="swiper-button-white swiper-button-prev  sbp-1"></div>
+    </div>
+
+
+    <!-- Modal  section-->
+    <div class="modal fade" id="proyectOne" style="display: none;" >
+
+            <div class="container">
+                <div class="swiper-container swiper-modal">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper-box-content">
+                                <img src="images/01-integra_group/a-integra-01.jpg"  />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-box-content">
+                                <img src="images/01-integra_group/a-integra-02.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-box-content">
+                                <img src="images/01-integra_group/a-integra-03.jpg"  />
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper-box-content">
+                                <img src="images/01-integra_group/a-integra-04.jpg"  />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-button-next sbn-2"></div>
+                    <div class="swiper-button-prev sbp-2"></div>
+                </div>
+                <div class="proyectInfo">
+                    <h3 class="proyectName">
+                        <span class="square"></span>Punto red / 01
+                    </h3>
+                    <p class="proyectLocation"><i class="fa fa-map-marker"></i>Barrio La Castellana – Bogotá</p>
+                </div>
+            </div>
+    </div>
+    
+    <!--Footer-->
+
+    <footer>
+        <div class="row">
+            <div class="col-md-6 data">
+                <p><b>Arq. Didier Martinez</b> <br> 3213727970 <br> <a href="mailto:didier.martinezc@azomeg.com">didier.martinezc@azomeg.com</a></p>
+            </div>
+            <div class="col-md-6">
+                <p><b>Arq. Luis Malagón</b> <br> 3155220979 <br> <a href="mailto:luis.malagon@azomeg.com">luis.malagon@azomeg.com</a></p>
+            </div>
         </div>
     </footer>
+
+    <script>
+
+        let swiperModal = new Swiper('.swiper-carousel', {
+            init:true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                depth: 400,
+                stretch: 0,
+                modifier: 1,
+                slideShadows : false},
+            navigation: {
+                nextEl: ' .sbn-1',
+                prevEl: ' .sbp-1'
+            }
+        });
+
+        window.swiper = new Swiper('.swiper-modal', {
+            init:true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                depth: 400,
+                stretch: 0,
+                modifier: 1,
+                slideShadows : false},
+            navigation: {
+                nextEl: ' .sbn-2',
+                prevEl: ' .sbp-2'
+            }
+        });
+
+
+    </script>
 </body>
 </html>

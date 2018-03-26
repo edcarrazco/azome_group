@@ -26,7 +26,7 @@
 	padding: 0;
 	list-style-type: none;
 	color: #ffffff;
-	font-family: 'Source Sans Pro';
+	font-family: 'Source Sans Pro', sans-serif;
 	outline: none;
 }
 body {
@@ -132,15 +132,32 @@ hr {
     border-width: 2px;
     border-color: #e63324;
 }
+.imgContent {
+	display: grid;
+	grid-template-columns: auto 404px;
+	grid-gap: 25px;
+}
+.imgContent img{
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+	transition:All .7s ease;
+	-webkit-transition:All .7s ease;
+	-moz-transition:All .7s ease;
+	-o-transition:All .7s ease;
+}
+.imgContent img:hover{
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
 .img_nos {
 	text-align: center;
-	transition:All 1s ease;
-	-webkit-transition:All 1s ease;
-	-moz-transition:All 1s ease;
-	-o-transition:All 1s ease;
-}
-.img_nos:hover {
-	padding: 0;
 }
 .img_nos img {
 	max-width: 1140px;
@@ -157,7 +174,7 @@ hr {
 .design ul li {
 	display: inline-block;
 	font-size: 34px;
-	font-family: 'Bebas Neue Book';
+	font-family: 'Bebas Neue Book', sans-serif;
 	line-height: 33px;
 	padding: 0 70px;
 	vertical-align: middle;
@@ -175,42 +192,114 @@ hr {
 .rombo {
 	margin: 0 50px;
 }
-
-/*CSS NUESTROS PROYECTOS*/
-.slider {
-    display: flex;
-    position: relative;
-    margin-bottom: 50px;
+.swiper-container {
+	width: 100%;
+	max-width: 1180px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
-.slider #prev {
-    position: absolute;
-    align-self: center;
-    left: 40px;
+.carousel-section{
+	position: relative;
+	padding: 0 20px;
 }
-.slider #next {
-    position: absolute;
-    align-self: center;
-    right: 40px;
+.swiper-slide{
+	max-width: 480px;
+	position: relative;
 }
-#carousel {
-	width:100%;
-    height:300px;
-    position:relative;
-    clear:both;
-    overflow:hidden;
+.swiper-slide .swiper-box-content{
+	width: 100%;
+	position: relative;
 }
-#carousel img {
-    visibility:hidden; /* hide images until carousel can handle them */
-    cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+.swiper-box-content img{
+	width: 100%;
+	height:auto;
 }
-.hide_act {
-	display: none;
+.swiper-button-next, .swiper-button-prev{
+	border: 2px solid #ffffff;
+	border-radius: 100%;
+	padding: 22px;
+	background-size: 20px 30px;
 }
-.info_proyect ul li {
-	list-style-type: square;
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+	right: 30px;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+	left: 30px;
+}
+.proyect-btn{
+	position: absolute;
+	background: transparent;
+	border:1px solid #ffffff;
+	padding:5px 10px;
+	text-align: center;
+	text-transform: uppercase;
 	font-size: 20px;
-	color: #e63324;
+	bottom: 50px;
+	right: 50px;
+	letter-spacing: 3px;
+	-webkit-transition: all ease-in-out .3s;
+	-moz-transition: all ease-in-out .3s;
+	-o-transition: all ease-in-out .3s;
+	transition: all ease-in-out .3s;
 }
+.proyect-btn span{
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0 6px;	-webkit-transition: all ease-in-out .3s;
+	-moz-transition: all ease-in-out .3s;
+	-o-transition: all ease-in-out .3s;
+	transition: all ease-in-out .3s;
+}
+.proyect-btn:hover{
+	background: #ffffff;
+	color: #000000;
+	text-decoration: none;
+}
+.proyect-btn:hover span{
+	color: #000000;
+}
+.proyectInfo{
+	text-align: center;
+	padding: 40px;
+}
+.swiper-carousel .proyectInfo, .swiper-carousel .proyect-btn {
+	opacity: 0;
+}
+.swiper-carousel .swiper-slide-active .proyectInfo, .swiper-carousel .swiper-slide-active .proyect-btn {
+	opacity: 1;
+}
+.swiper-carousel .swiper-slide .swiper-box-content img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+}
+.swiper-carousel .swiper-slide-active .swiper-box-content img {
+	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
+	filter: grayscale(0%);
+}
+.proyectInfo h3{
+	font-family: 'Bebas Neue Book', sans-serif;
+	font-size: 55px;
+}
+.proyectInfo p{
+	font-size: 28px;
+	font-style: italic;
+}
+.proyectInfo i.fa{
+	margin-right: 15px;
+}
+.proyectInfo .square{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-right: 50px;
+	vertical-align: middle;
+	background: #e63324;
+}
+.swiper-modal .swiper-slide{
+	width: 100%;
+	max-width: 100%;
+}
+	/*CSS NUESTROS PROYECTOS*/
 
 /*CSS FOOTER*/
 footer {
@@ -226,7 +315,75 @@ footer .data {
 footer .col-md-6 p {
 	line-height: 20px;
 }
+@media only screen and (max-width: 1199px){
+	.paragraph {
+		text-align: center;
+		padding-bottom: 40px;
+	}
+	.imgContent {
+		grid-template-columns: auto 59%;
+	}
+	.design ul li{
+		padding: 0 20px;
+	}
+	.arq, .mob{
+		width: auto;
+	}
+}
 
-@media (max-width: 600px) {
-
+@media screen and (max-width: 780px) {
+	.design ul li{
+		font-size: 30px;
+	}
+	.rombo {
+		margin: 0 20px;
+	}
+	nav a{
+		font-size: 25px;
+	}
+}
+@media (max-width: 660px) {
+	.logo{
+		width: 30%;
+	}
+	nav a {
+		font-size: 22px;
+		display: block;
+		max-width: 85%;
+		margin: auto;
+	}
+	.imgContent {
+		grid-template-columns: auto;
+	}
+	.design ul li {
+		font-size: 30px;
+		display: block;
+		text-align: center;
+		padding: 20px;
+		border: none;
+	}
+	footer .data{
+		border-right: none;
+		margin-bottom: 15px;
+		border-bottom: 2px solid #ffffff;
+	}
+	footer p{
+		text-align: center;
+	}
+	.proyectInfo h3 {
+		font-size: 35px;
+	}
+	.proyectInfo p {
+		font-size: 18px;
+	}
+	.swiper-button-next, .swiper-button-prev{
+		border:none;
+		top:70%;
+	}
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+		right: 8px;
+	}
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+		left: 8px;
+	}
 }
