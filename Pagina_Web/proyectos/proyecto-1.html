@@ -139,14 +139,15 @@
     </footer>
 
     <script>
-
-        let swiper = new Swiper('.swiper-container', {
+      window.onload = function () {
+        var swiper = new Swiper('.swiper-container', {
             loop: true,
             navigation: {
                 nextEl: ' .sbn-2',
                 prevEl: ' .sbp-2'
             }
         });
+      }
     </script>
 </body>
 </html>
