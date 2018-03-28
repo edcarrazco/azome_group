@@ -348,6 +348,35 @@ hr {
 .swiper-sidebar .block-info img{
 	max-height: 100%;
 }
+/*CONTACT SECTION*/
+.contactSection h3{
+	text-transform: uppercase;
+	font-family: 'Bebas Neue Book', sans-serif;
+	font-size: 29px;
+	margin-top: 5px;
+	letter-spacing: 3px;
+}
+.contactSection .row{
+	padding: 10px 0;
+}
+.contactRight{
+	max-width: 250px;
+	margin: auto;
+	border-top: 1px solid #e63324;
+	margin-top: 16px;
+	padding-top: 8px;
+}
+.contactRight p{
+	margin: 0;
+	font-size: 16px;
+}
+.followText{
+	text-align: center;
+	padding: 25px 25px 0;
+	max-width: 480px;
+	border-bottom: 1px solid #ffffff;
+	margin: auto;
+}
 /*CSS FOOTER*/
 footer {
 	background-color: #000000;
@@ -398,6 +427,13 @@ footer .col-md-6 p {
 @media (max-width: 660px) {
 	.logo {
 		width: 30%;
+	}
+	.contactSection{
+		padding: 0 50px;
+	}
+	.contactRight{
+		max-width: inherit;
+
 	}
 
 	nav a {
