@@ -377,6 +377,25 @@ hr {
 	border-bottom: 1px solid #ffffff;
 	margin: auto;
 }
+.socialContact{
+	text-align: center;
+	padding: 50px 25px;
+	max-width: 480px;
+	margin: auto;
+}
+.socialContact a{
+	margin: 0 15px;
+}
+.backButton{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 900;
+	display: block;
+	text-align: right
+}
+a.backButton{
+	text-decoration: none;
+}
 /*CSS FOOTER*/
 footer {
 	background-color: #000000;
