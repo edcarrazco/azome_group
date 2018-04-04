@@ -115,9 +115,12 @@ nav a.active_menu {
     padding: 0 3%;
     display: flex;
 }
+.flex {
+	display: flex;
+}
 .paragraph {
 	text-align: right;
-    font-size: 15px;
+    font-size: 13px;
     align-self: center;
     padding: 0;
     padding-right: 2%;
@@ -456,10 +459,14 @@ footer .col-md-6 p {
 	}
 
 	nav a {
-		font-size: 22px;
+		font-size: 20px;
 		display: block;
 		max-width: 85%;
 		margin: auto;
+	}
+
+	.flex {
+		display: initial;
 	}
 
 	.imgContent {
