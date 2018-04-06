@@ -203,7 +203,15 @@
             prevEl: ' .sbp-1'
           }
         });
-      }
+        $(window).resize(function(){
+          var ww = $(window).width();
+          if (ww>1000) swiperSlide.params.slidesPerView = 5;
+          if (ww>468 && ww<=1000) swiperSlide.params.slidesPerView = 1;
+          if (ww<=468) swiperSlide.params.slidesPerView = 1;
+          mySwiper.reInit()
+        });
+        $(window).trigger('resize')
+      };
     </script>
 </body>
 </html>
