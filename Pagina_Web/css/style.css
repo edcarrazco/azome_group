@@ -56,9 +56,9 @@ header {
 	width: 100%;
 }
 nav {
-	font-size: 32px;
+	font-size: 22px;
 	color: #ffffff;
-	margin-top: 30px;
+	margin-top: 50px;
 }
 nav a {
 	text-decoration: none;
@@ -91,19 +91,20 @@ nav a.active_menu {
 	right: 2%;
 }
 .social ul li {
-	background-image: url('../images/social.png');
-	margin-bottom: 20px;
-	width: 50px;
-	height: 50px;
+	background-image: url(../images/social.png);
+    margin-bottom: 20px;
+    background-size: 40px;
+    width: 40px;
+    height: 40px;
 }
 .social ul li.s_youtube {
-	background-position-y: 189px;
+	background-position-y: 179px;
 }
 .social ul li.s_pinterest {
-	background-position-y: 119px;
+	background-position-y: 109px;
 }
 .social ul li.s_facebook {
-	background-position-y: 50px;
+	background-position-y: 40px;
 }
 .social ul li span {
 	display: none;
@@ -115,9 +116,12 @@ nav a.active_menu {
     padding: 0 3%;
     display: flex;
 }
+.flex {
+	display: flex;
+}
 .paragraph {
 	text-align: right;
-    font-size: 15px;
+    font-size: 13px;
     align-self: center;
     padding: 0;
     padding-right: 2%;
@@ -456,10 +460,14 @@ footer .col-md-6 p {
 	}
 
 	nav a {
-		font-size: 22px;
+		font-size: 20px;
 		display: block;
 		max-width: 85%;
 		margin: auto;
+	}
+
+	.flex {
+		display: initial;
 	}
 
 	.imgContent {
